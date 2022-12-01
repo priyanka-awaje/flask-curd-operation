@@ -1,0 +1,64 @@
+<html>
+<head>
+    <center><h1>WELCOME TO HOME PAGE</h1></center>
+</head>
+
+<style>
+body{
+
+    background-image: url(../static/download.jpg);
+    }
+
+
+
+
+</style>
+
+
+<BODY>
+
+    <DIV>
+<fieldset>
+<center>
+<a href="/reglink">Register Page</a><br><br>
+<a href="/loginlink">Login Page</a><br><br>
+<a href="/displaylink">Display Page</a><br><br>
+</center>
+</fieldset>
+    </DIV>
+
+
+<div>
+
+    <h1>Registration Details</h1>
+    <fieldset>
+        <br>
+        <br>
+        <table border="2px" solid>
+            <tr>
+                <td>Id</td>
+                <td>Email ID</td>
+                <td>Username</td>
+                <td>Password</td>
+
+            </tr>
+
+            {% for i in data %}
+            <tr>
+                <td>{{i[0]}}</td>
+                <td>{{i[1]}}</td>
+                <td>{{i[2]}}</td>
+                <td>{{i[3]}}</td>
+                <td>
+                    <a href="/editlink/{{i[0]}}">EDIT</a>
+                    <a href="/deletelink/{{i[0]}}">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+
+
+
+    </fieldset>
+</div>
+</BODY>
